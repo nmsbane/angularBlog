@@ -4,7 +4,12 @@ blogApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.when('/', {
       templateUrl: 'views/posts.html',
       controller: 'PostsController'
-    }).otherwise({
+    }).when('/post/:id', {
+      templateUrl: 'views/singlepost.html',
+      controller: 'SinglePostController'
+    })
+
+    .otherwise({
       redirectTo: '/'
     });
 }]);

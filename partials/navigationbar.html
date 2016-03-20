@@ -2,7 +2,9 @@
 
   <a href="#/" class="navbar-brand">My Blog in AngularJS</a>
   <ul class="nav navbar-nav">
-    <li> <a href="#/">Home</a></li>
+    <li ng-repeat="page in pages">
+      <a href="#/{{ page.title }}">{{ page.title }}</a>
+    </li>
   </ul>
 
 </nav>
