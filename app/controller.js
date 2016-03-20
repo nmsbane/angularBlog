@@ -1,4 +1,6 @@
 angular.module('app.controllers', [])
-              .controller('PostsController', ['$scope', function($scope){
-                  $scope.message = 'Hello my blog';
+              .controller('PostsController', ['$scope', '$http', function($scope, $http){
+                  $http.get('data/posts.json').success(function(data){
+                    $scope.posts = data;
+                  })
               }])
