@@ -7,6 +7,9 @@ blogApp.config(['$routeProvider', function($routeProvider){
     }).when('/post/:id', {
       templateUrl: 'views/singlepost.html',
       controller: 'SinglePostController'
+    }).when('/page/:id', {
+      templateUrl: 'views/page.html',
+      controller: 'PageController'
     })
 
     .otherwise({
